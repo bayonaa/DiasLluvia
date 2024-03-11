@@ -23,4 +23,16 @@ public class DiasLluvia {
         }
         return registroDiasLluvia[mes - 1][dia - 1];
     }
+
+    public int contarDiasLluviosos() {
+        int cont = 0;
+        for (int i = 0; i < registroDiasLluvia.length; i++) {
+            for (int j = 0; j < registroDiasLluvia[i].length; j++) {
+                if (registroDiasLluvia[i][j]) {
+                    cont++;
+                }
+            }
+        }
+        return  cont;
+    }
 }
