@@ -94,4 +94,26 @@ public class DiasLluviaTest {
         diasLluvia.registroDia(20, 4, true);
         assertNotEquals(3, diasLluvia.trimestreLluvioso());
     }
+
+    @Test //Test1 para el método primerDiaLluvia()
+    public void testPrimerDiaLluvia1() {
+        DiasLluvia diasLluvia = new DiasLluvia();
+        diasLluvia.registroDia(1, 1, true);
+        diasLluvia.registroDia(2, 1, false);
+        assertEquals(1, diasLluvia.primerDiaLluvia());
+    }
+
+    @Test //Test2 para el método primerDiaLluvia()
+    public void testPrimerDiaLluvia2() {
+        DiasLluvia diasLluvia = new DiasLluvia();
+        diasLluvia.registroDia(15, 6, true);
+        diasLluvia.registroDia(20, 6, true);
+        assertEquals(170, diasLluvia.primerDiaLluvia());
+    }
+
+    @Test //Test3 para el método primerDiaLluvia()
+    public void testPrimerDiaLluvia3() {
+        DiasLluvia diasLluvia = new DiasLluvia();
+        assertEquals(-1, diasLluvia.primerDiaLluvia());
+    }
 }
