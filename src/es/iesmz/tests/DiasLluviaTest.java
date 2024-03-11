@@ -27,4 +27,24 @@ public class DiasLluviaTest {
         DiasLluvia diasLluvia = new DiasLluvia();
         assertFalse(diasLluvia.registroDia(32, 12, true));
     }
+
+    @Test //Test1 para el método consultarDia()
+    public void testConsultarDia1() {
+        DiasLluvia diasLluvia = new DiasLluvia();
+        diasLluvia.registroDia(1, 1, true);
+        assertTrue(diasLluvia.consultarDia(1, 1));
+    }
+
+    @Test //Test2 para el método consultarDia()
+    public void testConsultarDia2() {
+        DiasLluvia diasLluvia = new DiasLluvia();
+        diasLluvia.registroDia(1, 1, true);
+        assertFalse(diasLluvia.consultarDia(1, 2));
+    }
+
+    @Test //Test3 para el método consultarDia()
+    public void testConsultarDia3() {
+        DiasLluvia diasLluvia = new DiasLluvia();
+        assertFalse(diasLluvia.consultarDia(32, 12));
+    }
 }
