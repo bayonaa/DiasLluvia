@@ -66,4 +66,17 @@ public class DiasLluvia {
         }
         return trimestreMasLluvioso;
     }
+
+    public int primerDiaLluvia() {
+        int dia = 0;
+        for (int i = 0; i < registroDiasLluvia.length; i++) {
+            for (int j = 0; j < registroDiasLluvia[i].length; j++) {
+                dia++;
+                if (registroDiasLluvia[i][j]) {
+                    return dia;
+                }
+            }
+        }
+        return -1;
+    }
 }
